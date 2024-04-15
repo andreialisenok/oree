@@ -1,0 +1,70 @@
+.partners {
+  padding: 50px 0;
+  background: $white-1;
+  @media (min-width: $lg) {
+    padding: 100px 0;
+  }
+  h2 {
+    // margin-bottom: 50px;
+    font-family: $font-lato;
+    font-size: 22px;
+    font-weight: 700;
+    color: $green;
+    @media (min-width: $lg) {
+      //   margin-bottom: 100px;
+      font-size: 30px;
+    }
+  }
+  .partners-swiper {
+    height: 300px;
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 200px;
+      }
+    }
+    .swiper-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      bottom: 20px;
+      .swiper-pagination-bullet-active {
+        width: 10px;
+        height: 10px;
+        background: $green;
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      background: $white;
+      border: 1px solid $white-1;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $gray;
+      transition: border 0.3s ease-in-out, color 0.3s ease-in-out,
+        background 0.3s ease-in-out;
+      &:hover {
+        border: 1px solid transparent;
+        background: $green;
+        color: $white;
+      }
+      &::after {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+  }
+}

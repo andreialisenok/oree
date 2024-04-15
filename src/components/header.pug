@@ -1,0 +1,64 @@
+header.header
+    .header__top
+        .container
+            .header__row
+                include ./logo.pug
+                nav.menu-desktop
+                    .phones
+                        div
+                            span Отдел продаж:
+                            a(href="tel:+375297600256")
+                                i.fa-solid.fa-phone
+                                | +375 (29) 7-600-256
+                        div
+                            span Отдел сервиса:
+                            a(href="tel:+375295674433")
+                                i.fa-solid.fa-phone
+                                | +375 (29) 567-44-33
+                    .search
+                        input(type="text", placeholder="Поиск по сайту")
+                        i.fa-solid.fa-magnifying-glass
+                    button(type='button').login
+                        i.fa-solid.fa-right-to-bracket
+                        | Войти
+                nav.menu-mobile
+                    .search
+                        input(type="text", placeholder="Поиск по сайту")
+                        i.fa-solid.fa-magnifying-glass
+                    ul
+                        li
+                            a(href="./catalog.html") Каталог
+                        li
+                            a(href="#") Новости
+                        li
+                            a(href="#") О нас
+                        li
+                            a(href="#") Контакты
+                    button(type='button').login
+                        i.fa-solid.fa-right-to-bracket
+                        | Войти
+                    .phones
+                        div
+                            span Отдел продаж:
+                            a(href="tel:+375297600256")
+                                i.fa-solid.fa-phone
+                                | +375 (29) 7-600-256
+                        div
+                            span Отдел сервиса:
+                            a(href="tel:+375295674433")
+                                i.fa-solid.fa-phone
+                                | +375 (29) 567-44-33
+                    p ООО "ПКП-Техно"
+                        br
+                        | Официальный дилер в Беларуси
+                button(type='button').burger
+    .header__bottom
+        ul
+            li
+                a(href="./catalog.html") Каталог
+            li
+                a(href="./news.html") Новости
+            li
+                a(href="./about.html") О нас
+            li
+                a(href="./contacts.html") Контакты

@@ -1,0 +1,361 @@
+.header {
+  padding: 24.5px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  z-index: 50000;
+  @media (min-width: $lg) {
+    position: static;
+    padding: 0;
+  }
+  &__top {
+    @media (min-width: $lg) {
+      padding: 11.5px 0;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      right: 0;
+      z-index: 50000;
+      background: $white;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    @media (min-width: $xl) {
+      padding: 15px 0;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__bottom {
+    display: none;
+    @media (min-width: $lg) {
+      display: block;
+      padding-top: 70px;
+    }
+    ul {
+      display: flex;
+      li {
+        flex: 1;
+        background: $green;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+        &:hover {
+          background: $dark-green;
+        }
+        a {
+          display: block;
+          padding: 14.5px 0;
+          font-size: 14px;
+          font-weight: 700;
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+.menu-desktop {
+  display: none;
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    gap: 30px;
+  }
+
+  .phones {
+    display: flex;
+    gap: 30px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      @media (min-width: $xl) {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+      span {
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 700;
+        color: $gray;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+  .search {
+    position: relative;
+    input {
+      width: 100%;
+      border: 1px solid $white-1;
+      outline: none;
+      font-family: $font-lato;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0 34px 0 10px;
+      border-radius: 5px;
+      height: 40px;
+      color: $black;
+      line-height: 40px;
+      background: $white;
+      &:focus,
+      &:active,
+      &:focus {
+        & ~ i {
+          color: $green;
+        }
+      }
+      &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+      }
+    }
+    i {
+      color: $gray;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+    }
+  }
+  .login {
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid $white-1;
+    color: $gray;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+    background: $white;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+}
+.menu-mobile {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: $green;
+  padding: 24px 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  @media (min-width: $lg) {
+    display: none;
+  }
+  &.isOpen {
+    transform: translateX(0%);
+  }
+  .search {
+    position: relative;
+    input {
+      width: 100%;
+      border: 1px solid $white-1;
+      outline: none;
+      font-family: $font-lato;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0 34px 0 10px;
+      border-radius: 5px;
+      height: 40px;
+      color: $gray;
+      line-height: 40px;
+      background: $white;
+      &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray;
+      }
+      &:focus,
+      &:active,
+      &:focus {
+        & ~ i {
+          color: $green;
+        }
+      }
+    }
+    i {
+      color: $gray;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+        cursor: pointer;
+        position: relative;
+        text-transform: uppercase;
+        &::before {
+          content: '';
+          position: absolute;
+          display: block;
+          left: 0;
+          right: 0;
+          bottom: -3px;
+          width: 0%;
+          height: 1px;
+          background: $white;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .login {
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid $white-1;
+    color: $gray;
+    height: 40px;
+    flex: 0 0 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    background: $white;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    &:hover {
+      background: $white-1;
+      color: $green;
+    }
+    i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .phones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      span {
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 700;
+        color: $white;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+  p {
+    color: $white;
+    margin-top: auto;
+    text-align: center;
+  }
+}
+.burger {
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  @media (min-width: $lg) {
+    display: none;
+  }
+  &::before,
+  &::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: $green;
+  }
+  &::before {
+    top: 0;
+    box-shadow: 0 9px 0 $green;
+    transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+  }
+  &::after {
+    bottom: 0;
+    transition: bottom 0.3s 0.15s, transform 0.3s;
+  }
+  &.isOpen::before {
+    top: 9px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 0 transparent;
+    transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+  }
+  &.isOpen::after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+    transition: bottom 0.3s, transform 0.3s 0.15s;
+  }
+}

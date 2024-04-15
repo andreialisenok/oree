@@ -1,0 +1,115 @@
+.catalog {
+  padding: 50px 0;
+  @media (min-width: $lg) {
+    padding: 100px 0;
+  }
+  &__row {
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 30px;
+      a {
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+        color: $light-gray;
+        transition: color 0.3s ease-in-out;
+        position: relative;
+        &::before {
+          content: '―';
+          position: absolute;
+          right: -22px;
+          color: $light-gray;
+        }
+        &:hover {
+          color: $green;
+        }
+      }
+      p {
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+        color: $light-gray;
+      }
+    }
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: $font-lato;
+      font-size: 22px;
+      font-weight: 700;
+      color: $green;
+      @media (min-width: $lg) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+    }
+    & > p {
+      font-family: $font-lato;
+      font-size: 14px;
+      font-weight: 400;
+      color: $gray;
+      margin-bottom: 30px;
+      @media (min-width: $lg) {
+        margin-bottom: 50px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 100%;
+        margin: 0 -1px -1px 0;
+        @media (min-width: $md) {
+          width: 50%;
+        }
+        @media (min-width: $lg) {
+          width: 33.33333%;
+        }
+        @media (min-width: $xl) {
+          width: 25%;
+        }
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 20px;
+          border: 1px solid $white-1;
+          transition: box-shadow 0.3s ease-in-out;
+          height: 100%;
+          position: relative;
+          &:hover {
+            border: 1px solid transparent;
+            box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+            h3 {
+              color: $green;
+            }
+          }
+          h3 {
+            font-family: $font-lato;
+            font-size: 14px;
+            font-weight: 400;
+            color: $gray;
+            text-align: center;
+            transition: color 0.3s ease-in-out;
+          }
+          span {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            font-family: $font-lato;
+            font-size: 12px;
+            font-weight: 400;
+            color: $light-gray;
+            text-align: center;
+            background: $white;
+            display: flex;
+            padding: 5px;
+            border: 1px solid $white-1;
+          }
+        }
+      }
+    }
+  }
+}

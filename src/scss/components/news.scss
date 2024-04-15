@@ -1,0 +1,116 @@
+.news {
+  padding: 50px 0;
+  @media (min-width: $lg) {
+    padding: 100px 0;
+  }
+  &__row {
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 30px;
+      a {
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+        color: $light-gray;
+        transition: color 0.3s ease-in-out;
+        position: relative;
+        &::before {
+          content: '―';
+          position: absolute;
+          right: -22px;
+          color: $light-gray;
+        }
+        &:hover {
+          color: $green;
+        }
+      }
+      p {
+        font-family: $font-lato;
+        font-size: 14px;
+        font-weight: 400;
+        color: $light-gray;
+      }
+    }
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: $font-lato;
+      font-size: 22px;
+      font-weight: 700;
+      color: $green;
+      @media (min-width: $lg) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+    }
+    & > p {
+      font-family: $font-lato;
+      font-size: 14px;
+      font-weight: 400;
+      color: $gray;
+      margin-bottom: 30px;
+      @media (min-width: $lg) {
+        margin-bottom: 50px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 100%;
+        margin: 0 -1px -1px 0;
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px;
+          border: 1px solid $white-1;
+          transition: box-shadow 0.3s ease-in-out;
+          height: 100%;
+          position: relative;
+          @media (min-width: $md) {
+            flex-direction: row;
+          }
+          &:hover {
+            border: 1px solid transparent;
+            box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+          }
+          img {
+            @media (min-width: $md) {
+              max-width: 300px;
+            }
+          }
+          .content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h3 {
+              font-family: $font-lato;
+              font-size: 16px;
+              font-weight: 700;
+              color: $gray;
+              transition: color 0.3s ease-in-out;
+            }
+            p {
+              font-family: $font-lato;
+              font-size: 14px;
+              font-weight: 400;
+              color: $gray;
+            }
+            span {
+              font-family: $font-lato;
+              font-size: 12px;
+              font-weight: 400;
+              color: $light-gray;
+              @media (min-width: $md) {
+                margin-top: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

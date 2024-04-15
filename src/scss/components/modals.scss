@@ -1,0 +1,162 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+.modal-call {
+  background: $white;
+  padding: 30px 20px;
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  &.active {
+    display: flex;
+  }
+  p {
+    font-family: $font-lato;
+    font-size: 18px;
+    font-weight: 700;
+    color: $green;
+    margin-bottom: 30px;
+  }
+  label {
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 100%;
+    border: 1px solid $white-1;
+    outline: none;
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 34px 0 10px;
+    border-radius: 5px;
+    height: 40px;
+    color: $gray;
+    line-height: 40px;
+    background: #fff;
+    margin-bottom: 20px;
+  }
+  .submit {
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    color: $white;
+    height: 40px;
+    flex: 0 0 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    background: $green;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: $dark-green;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: $green;
+    font-family: $font-lato;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 300;
+  }
+}
+.modal-login {
+  background: $white;
+  padding: 30px 20px;
+  display: none;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  &.active {
+    display: flex;
+  }
+  label {
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 100%;
+    border: 1px solid $white-1;
+    outline: none;
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 34px 0 10px;
+    border-radius: 5px;
+    height: 40px;
+    color: $gray;
+    line-height: 40px;
+    background: #fff;
+    margin-bottom: 20px;
+  }
+  .submit {
+    font-family: $font-lato;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    color: $white;
+    height: 40px;
+    flex: 0 0 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    background: $green;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: $dark-green;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: $green;
+    font-family: $font-lato;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 300;
+  }
+}
