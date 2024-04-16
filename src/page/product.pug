@@ -68,17 +68,24 @@ html(lang="en")
                                     button.tab(data-title="video") Видео
                                     button.tab(data-title="characteristics") Характеристики
                                 .tabs-content.active#description
-                                    p Основное применение лазерных станков OR-FMA для резки, гравировки, пробивки отверстий в листовом металле с высокой точностью и качеством обработки по контуру: нержавеющей стали, углеродистой стали, легированной стали, меди, алюминия.
-                                    img(src="./img/product/content1.png", alt="")
-                                    p Улучшенная конструкция станины позволяет снизить тепловое излучение в зоне резки и обеспечивает долгосрочную стабильность работы станка.
-                                    img(src="./img/product/content2.png", alt="")
-                                    p Стол имеет модульную конструкцию, которая обеспечивает простоту демонтажа и замены, а также отличную вентиляцию.
-                                    img(src="./img/product/content3.png", alt="")
-                                    p Обновленная система дымоудаления.
-                                    img(src="./img/product/content4.png", alt="")
-                                    p Система управления представляет собой дружелюбную и многофункциональную платформу.
+                                    h5 Основное применение лазерных станков OR-FMA для резки, гравировки, пробивки отверстий в листовом металле с высокой точностью и качеством обработки по контуру: нержавеющей стали, углеродистой стали, легированной стали, меди, алюминия.
+                                    .desc
+                                        div
+                                            p Улучшенная конструкция станины позволяет снизить тепловое излучение в зоне резки и обеспечивает долгосрочную стабильность работы станка.
+                                            img(src="./img/product/content1.png", alt="")
+                                        div
+                                            p Стол имеет модульную конструкцию, которая обеспечивает простоту демонтажа и замены, а также отличную вентиляцию.
+                                            img(src="./img/product/content2.png", alt="")
+                                        div
+                                            p Обновленная система дымоудаления.
+                                            img(src="./img/product/content3.png", alt="")
+                                        div
+                                            p Система управления представляет собой дружелюбную и многофункциональную платформу.
+                                            img(src="./img/product/content4.png", alt="")
                                 .tabs-content#video
-                                    iframe(src="https://www.youtube.com/embed/DS42bfpC7bE?autoplay=1&rel=0")
+                                    //- video(width="400" controls="controls" autoplay)
+                                        //- source(src="https://www.youtube.com/embed/DS42bfpC7bE")
+                                    iframe(src="https://www.youtube.com/embed/DS42bfpC7bE?autoplay=0")
                                 .tabs-content#characteristics
                                     table
                                         thead

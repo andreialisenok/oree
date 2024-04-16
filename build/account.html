@@ -63,23 +63,44 @@
         </div>
       </header>
       <main class="main">
-        <section class="contacts">
+        <section class="account">
           <div class="container">
-            <div class="contacts__row">
+            <div class="account__row">
               <div class="breadcrumb"><a href="./index.html">Главная</a>
-                <p>Контакты</p>
+                <p>Личный Кабинет</p>
               </div>
-              <h2>Контакты</h2>
-              <div class="content"><span>адрес</span>
-                <p>220037, Республика Беларусь, город Минск, улица Авангардная, 48А-1H</p><span>режим работы</span>
-                <p>09:00 - 17:30</p><span>e-mail</span>
-                <p> <a href="mailto:info@mail.ru"><i class="fa-solid fa-envelope"></i>info@mail.ru</a></p><span>телефон</span>
-                <p><span>Отдел продаж:</span><a href="tel:+375297600256"><i class="fa-solid fa-phone"></i>+375 (29) 7-600-256</a></p>
-                <p><span>Отдел сервиса:</span><a href="tel:+375295674433"><i class="fa-solid fa-phone"></i>+375 (29) 567-44-33</a></p>
+              <h2>Личный Кабинет</h2>
+              <div class="content">
+                <div><span>Имя:</span><span>Александр</span></div>
+                <div><span>Фамилия:</span><span>Александров</span></div>
+                <div><span>Телефон:</span><span>+375(29) 123-45-67</span></div>
               </div>
-              <div class="map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d34cb29518319967af4fb97e5e00f637eb31c4ccaa19fc22bccf701f1e0bebf&amp;amp;source=constructor" frameborder="0"></iframe>
-              </div>
+              <form action="">
+                <fieldset>
+                  <legend>Оставить Заявку</legend>
+                  <div>
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="">
+                  </div>
+                  <div>
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="">
+                  </div>
+                  <div>
+                    <label for="tel">Телефон:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="">
+                  </div>
+                  <div>
+                    <label for="mail">Email:</label>
+                    <input type="mail" id="mail" name="mail" placeholder="">
+                  </div>
+                  <div>
+                    <label for="machine">Название оборудования:</label>
+                    <input type="text" id="machine" name="machine" placeholder="">
+                  </div>
+                  <button type="submit">Отправить</button>
+                </fieldset>
+              </form>
             </div>
           </div>
         </section>

@@ -160,17 +160,47 @@
         display: none;
         flex-direction: column;
         gap: 50px;
+        @media (min-width: $md) {
+          gap: 100px;
+        }
         &:last-child {
           overflow-x: auto;
         }
         &.active {
           display: flex;
         }
-        p {
+        h5 {
           font-family: $font-lato;
           color: $gray;
-          font-size: 14px;
-          font-weight: 400;
+          font-size: 16px;
+          font-weight: 700;
+        }
+        .desc {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+          @media (min-width: $md) {
+            gap: 100px;
+          }
+          & > div {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @media (min-width: $md) {
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-around;
+              &:nth-child(odd) {
+                flex-direction: row-reverse;
+              }
+            }
+            p {
+              font-family: $font-lato;
+              color: $gray;
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
         }
         img {
           @media (min-width: $md) {
